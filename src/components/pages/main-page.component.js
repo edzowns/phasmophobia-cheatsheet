@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-
+import Sticky from 'react-sticky-el';
 
 export default class MainGridPage extends Component {
 	
@@ -50,7 +50,7 @@ export default class MainGridPage extends Component {
 		// SECONDARY EVIDENCE GRID
 		let index = 0;
 		let secondaryEvidenceGrid = null;
-		if (this.props.selectedEvidenceAmount > 1 || this.props.selectedSecondaryEvidenceAmount > 0 || this.props.showAllSecondaryEvidence) {
+		if (this.props.selectedEvidenceAmount > 0 || this.props.selectedSecondaryEvidenceAmount > 0 || this.props.showAllSecondaryEvidence) {
 			secondaryEvidenceGrid = this.props.data.secondaryevidence.map((evidence) => {
 				let isVisible = false;
 				for (let ghostName of this.props.ghostNames) {
@@ -117,20 +117,26 @@ export default class MainGridPage extends Component {
 		return <div style={{ display: "inline-block", width: "100%", height:"100%"}}>
 			<div style={{ display: "flex", alignItems: "center", justifyContent: "center", margin: "25px 0px 15px 0px" }}>
 				<Container style={{ padding:"0", margin:"20px", marginTop: "0px", maxWidth:"100000px"}}>
-					<Row>
-						<Col style={{ textAlign:"center" }}>
-							<b>Leftclick: Select/Unselect Evidence.<br/>Rightclick: Ignore/Unignore Evidence.</b>
-						</Col>
-					</Row>
-					<Row>
-						<Col className={"evidence-header"}>
-							<Button variant="danger" onClick={() => this.props.resetEvidence()}>Unselect All Evidence</Button>
-						</Col>
-					</Row>
-					<Row style={{ width:"100%" }}>
-						<Col className={"evidence-header"}>EVIDENCE</Col>
-						{columnHeaders}
-					</Row>
+					<Sticky>	
+						<div style={{ backgroundColor:"#2B3E50", width:"100%", zIndex:"15", marginRight:"-15px", marginLeft:"-15px" }}>
+							<Row style={{ width:"100%", margin:"0", marginRight:"-15px" }}>
+								<Col style={{ textAlign:"center" }}>
+									<b>Leftclick: Select/Unselect Evidence.<br/>Rightclick: Ignore/Unignore Evidence.</b>
+								</Col>
+							</Row>
+						
+							<Row style={{ width:"100%", margin:"0", marginRight:"-15px" }}>
+								<Col className={"evidence-header"}>
+									<Button variant="danger" onClick={() => this.props.resetEvidence()}>Unselect All Evidence</Button>
+								</Col>
+							</Row>
+						
+							<Row style={{ width:"100%", margin:"0", marginRight:"-15px" }}>
+								<Col className={"evidence-header"}>EVIDENCE</Col>
+								{columnHeaders}
+							</Row>
+						</div>
+					</Sticky>
 					{grid}
 					<Form.Check
 						id="toggleSecondaryEvidence"
@@ -139,7 +145,7 @@ export default class MainGridPage extends Component {
 						custom="true"
 						label="Always show all Secondary Evidence"
 						checked={this.props.showAllSecondaryEvidence}
-						style={{ margin: "15px"}}
+						style={{ margin: "15px" }}
 						onChange={(e) => this.props.toggleSetting("showAllSecondaryEvidence")}
 					/>
 					{secondaryEvidenceGrid !== null &&

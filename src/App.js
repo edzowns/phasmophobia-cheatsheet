@@ -22,7 +22,7 @@ import logo from "./images/ghost.svg";
 const BG = "dark"; // primary, dark, light
 const VARIANT = "dark"; // dark, light
 
-const WEBSITE_URL = "un0btanium.github.io/phasmophobia-cheatsheet/";
+const WEBSITE_URL = "edzowns.github.io/phasmophobia-cheatsheet/";
 
 const PATCH_VERSION = data.patchVersion;
 
@@ -47,7 +47,9 @@ class App extends Component {
 		let photoTypeAmount = {}
 
 		// TODO add tooltip info for each ghost (copy ingame texts)
-
+		
+		//data.ghosts.sort((a, b) => (a.name < b.name) ? -1 : 1)
+		
 		for (let ghost of data.ghosts) {
 			ghost.evidence = ghost.primaryEvidences.concat(ghost.secondaryEvidences);
 			for (let primaryEvidence of ghost.primaryEvidences) {
@@ -67,12 +69,8 @@ class App extends Component {
 			ghostNames.push(ghost.name);
 		}
 
-
-		let sortAlphabetically = (a, b) => {
-			if (a < b) { return -1; }
-			if (a > b) { return 1; }
-			return 0;
-		}
+		let sortAlphabetically = (a, b) => (a < b) ? -1 : 1
+		
 		data.primaryevidence.sort(sortAlphabetically);
 		ghostNames.sort(sortAlphabetically);
 		for (let voicelineName in data.voicelines) {
@@ -164,7 +162,7 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<div className="full-screenable-node">
+				<div className="full-`scr`eenable-node">
 					<Navbar bg={BG} variant={VARIANT} expand="xl" style={{ boxShadow: '0px 2px 5px #000000' }}>
 						<Navbar.Brand style={{ marginLeft: "15%" }}>
 							<a href={"http://" + WEBSITE_URL}>
