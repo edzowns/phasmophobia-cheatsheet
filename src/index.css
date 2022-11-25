@@ -86,7 +86,7 @@ code {
 }
 
 .fullscreen-enabled {
-	background: #2B3E50;
+	background: #191919;
 }
 
 .reduceOpacityOnHover:hover {
@@ -111,7 +111,7 @@ code {
 	background-color:#731717;
 }
 .evidence-row.darkgrey-background {
-	background-color:#324254;
+	background-color:#222;
 }
 
 .evidence-header {

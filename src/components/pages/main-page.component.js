@@ -111,23 +111,36 @@ export default class MainGridPage extends Component {
 			if (this.props.selectedGhostAmount === 1 && this.props.selectedGhosts[ghostName]) {
 				additionalStyle = " green";
 			}
-			return <Col className={"ghost-header" + additionalStyle} key={"header-" + ghostName}><div className="rotated45">{ghostName}</div></Col>
+			return <Col 
+				className={"ghost-header" + additionalStyle}
+				key={"header-" + ghostName}
+				onClick={(e) => {
+					console.log(e.type + " CLICK " + ghostName)
+					e.preventDefault();
+				}}
+				onContextMenu={(e) => {
+					console.log(e.type + " CLICK " + ghostName)
+					e.preventDefault();
+				}}
+			>
+				<div className="rotated45">{ghostName}</div>
+			</Col>
 		});
 
 		return <div style={{ display: "inline-block", width: "100%", height:"100%"}}>
 			<div style={{ display: "flex", alignItems: "center", justifyContent: "center", margin: "25px 0px 15px 0px" }}>
 				<Container style={{ padding:"0", margin:"20px", marginTop: "0px", maxWidth:"100000px"}}>
 					<Sticky>	
-						<div style={{ backgroundColor:"#2B3E50", width:"100%", zIndex:"15", marginRight:"-15px", marginLeft:"-15px" }}>
+						<div style={{ backgroundColor:"#191919", width:"100%", zIndex:"15", marginRight:"-15px", marginLeft:"-15px" }}>
 							<Row style={{ width:"100%", margin:"0", marginRight:"-15px" }}>
 								<Col style={{ textAlign:"center" }}>
-									<b>Leftclick: Select/Unselect Evidence.<br/>Rightclick: Ignore/Unignore Evidence.</b>
+									<b>Left Click: Select/Deselect Evidence.<br/>Right Click: Ignore/Unignore Evidence.</b>
 								</Col>
 							</Row>
 						
 							<Row style={{ width:"100%", margin:"0", marginRight:"-15px" }}>
 								<Col className={"evidence-header"}>
-									<Button variant="danger" onClick={() => this.props.resetEvidence()}>Unselect All Evidence</Button>
+									<Button variant="danger" onClick={() => this.props.resetEvidence()}>Deselect All Evidence</Button>
 								</Col>
 							</Row>
 						
@@ -143,7 +156,7 @@ export default class MainGridPage extends Component {
 						draggable={false}
 						type="checkbox"
 						custom="true"
-						label="Always show all Secondary Evidence"
+						label="Show all Secondary Evidence"
 						checked={this.props.showAllSecondaryEvidence}
 						style={{ margin: "15px" }}
 						onChange={(e) => this.props.toggleSetting("showAllSecondaryEvidence")}

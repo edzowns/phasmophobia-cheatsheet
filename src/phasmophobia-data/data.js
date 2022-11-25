@@ -39,7 +39,7 @@ var data = {
 				"Spirit Box"
 			],
 			"secondaryEvidences": [
-				"Smudge sticks stop attacks for 3 min instead of 1.5"
+				"Smudge sticks prevent a hunt for 180 seconds instead of 90 seconds"
 			]
 		},
 		{
@@ -51,8 +51,8 @@ var data = {
 			],
 			"secondaryEvidences": [
 				"Stepping in salt leaves no UV footprints",
-				"Can become more active after stepping in salt",
-				"Can teleport to a random player (while not hunting) which will do EMF lvl 2 or 5 and do interactions"
+				"Increased ghost activity after salt has been stepped in",
+				"Can teleport to a random player (while not hunting) which will do EMF 2, or a 25% chance of doing EMF 5"
 			]
 		},
 		{
@@ -63,10 +63,13 @@ var data = {
 				"D.O.T.S. Projector"
 			],
 			"secondaryEvidences": [
-				"Looking at the ghost drops sanity by 0.4% each second instead of 0.2%",
-				"Taking a photo makes the ghost temporarily disappear (while not hunting)",
-				"Blinks slower during hunts (1s to 2s instead of 0.3s to 1s)",
-				"Can walk to a random player anywhere on the map (while not hunting) and do interactions"
+				"Looking at the ghost drops sanity by 0.4%/s instead of 0.2%/s",
+				"Ghost and interference not present in Ghost photo",
+				"Taking a photo of the ghost during an event makes it appear that the event has ended, but ghost sounds will continue",
+				"Blinks every 1-2 seconds, as opposed to 0.3-1 second",
+				"Will choose a random player and travel to their location (while not hunting) and do interactions",
+				"EMF 2 readings can be found at the location the Phantom begins walking to player",
+				"When it walks to you, events or initiate hunts won't happen (except cursed hunts)"
 			]
 		},
 		{
@@ -77,9 +80,9 @@ var data = {
 				"Fingerprints"
 			],
 			"secondaryEvidences": [
-				"Chance to throw objects with more force so they fly further (2 - 6 power, instead of 1 - 3 power)",
+				'Will throw an item with a "force" value of 2-6, instead of 1-3',
 				"Only ghost that can throw multiple objects at once",
-				"Every thrown object makes players loose 2% sanity instead of 1%",
+				"Players will lose 2% sanity per object thrown near them",
 				"Very inactive in rooms without items",
 				"While hunting, guaranteed to throw an object in range every 0.5 seconds"
 			]
@@ -92,12 +95,12 @@ var data = {
 				"D.O.T.S. Projector"
 			],
 			"secondaryEvidences": [
-				"Targets and hunts one player until killed (If the player is not in the building, it does a regular hunt)",
-				"Only checks their targets sanity % for initiating a hunt in multiplayer",
+				"Targets and hunts one player until killed (regular hunt is done if target is not in investigation area)",
+				"Only checks their targets sanity for initiating a hunt",
 				"Will often wander toward their target when roaming",
 				"Singing ghost events will now drain an extra 5% sanity on the Banshee's target",
 				"Preferes singing ghost events over other events",
-				"Can sometimes be heard wailing with a parabolic microphone"
+				"33% chance of hearing Banshee Wailing instead of whispers/footsteps over Parabolic Microphone"
 			]
 		},
 		{

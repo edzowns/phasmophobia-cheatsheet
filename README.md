@@ -1,35 +1,11 @@
-# Phasmophobia CheatSheet
+# Phasmo Checklist
 
-This React web application for the game Phasmophobia provides you with a fast overview of the ghost types and their evidence. You can select evidence and the website will highlight the ghost types that are related to that evidence.
+Forked from un0btainium's [Phasmophobia CheatSheet](https://github.com/un0btanium/phasmophobia-cheatsheet) project, the Phasmo Checklist is a collection of my changes that work for me and my friends. Instead of contributing to the original by adding my own design choices (wording, coding, functionality, or otherwise), I decided it was likely best to create a fork for myself.
 
+My version stickies the ghost header on scroll, very hackily makes everything a purple darkmode, changes required primary evidence to 1 for secondary evidence to appear, removes about/contact, adds missing ghost behaviours, modifies a lot of wording to allow for less ambiguity, and adds some other bits that will open up further features down the line.
 
+## Coming Soon
 
-# Contribute
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
+- Select/deselect ghost instead of finding the specific evidence to randomly ignore
+- Add strength/weakness/description tooltips (also in the coming soon of the master project)
+- Add all data to local storage as backup

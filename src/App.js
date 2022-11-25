@@ -11,8 +11,6 @@ import Nav from 'react-bootstrap/Nav';
 
 import MainPage from './components/pages/main-page.component';
 import VoiceLinesPage from './components/pages/voice-lines-page.component';
-import AboutPage from './components/pages/about-page.component';
-import ContactPage from './components/pages/contact-page.component';
 import PhotoRewardsPage from './components/pages/photo-rewards.component';
 
 import data from './phasmophobia-data/data.js';
@@ -167,7 +165,7 @@ class App extends Component {
 						<Navbar.Brand style={{ marginLeft: "15%" }}>
 							<a href={"http://" + WEBSITE_URL}>
 								<img src={logo} width="35" height="35" alt="Logo" />
-								<b>{' Phasmophobia CheatSheet'}</b>
+								<b>{" Ed's Phasmo Checklist"}</b>
 							</a>
 						</Navbar.Brand>
 
@@ -180,9 +178,7 @@ class App extends Component {
 							</Nav>
 
 							<Nav>
-								<Nav.Link as={Link} variant="light" to="/phasmophobia-cheatsheet/about"><b>About</b></Nav.Link>
-								<Nav.Link as={Link} variant="light" to="/phasmophobia-cheatsheet/contact"><b>Contact</b></Nav.Link>
-								<Navbar.Text style={{ color: "rgb(223, 105, 26)", marginLeft: "20px" }}><b>Patch <i>{PATCH_VERSION}</i></b></Navbar.Text>
+								<Navbar.Text style={{ marginLeft: "20px" }}><b>Patch <i>{PATCH_VERSION}</i></b></Navbar.Text>
 								{/* <Form inline style={{marginLeft: "20px"}}><Form.Check id="toggleIsFullScreen" type="checkbox" className="custom-switch" custom="true" label="Go Fullscreen" checked={this.state.isFullScreen} onChange={(e) => this.toggleSetting("isFullScreen")} /></Form> */}
 							</Nav>
 						</Navbar.Collapse>
@@ -202,16 +198,6 @@ class App extends Component {
 						<Route exact path="/phasmophobia-cheatsheet/photorewards" render=
 							{(props) => <PhotoRewardsPage {...props}
 								{...this.state}
-							/>}
-						/>
-						<Route exact path="/phasmophobia-cheatsheet/about" render=
-							{(props) => <AboutPage {...props}
-
-							/>}
-						/>
-						<Route exact path="/phasmophobia-cheatsheet/contact" render=
-							{(props) => <ContactPage {...props}
-
 							/>}
 						/>
 						<Route render=
