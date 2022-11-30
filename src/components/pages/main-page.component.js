@@ -131,7 +131,7 @@ export default class MainGridPage extends Component {
 			<div style={{ display: "flex", alignItems: "center", justifyContent: "center", margin: "25px 0px 15px 0px" }}>
 				<Container style={{ padding:"0", margin:"20px", marginTop: "0px", maxWidth:"100000px"}}>
 					<Sticky>	
-						<div style={{ backgroundColor:"#191919", width:"100%", zIndex:"15", marginRight:"-15px", marginLeft:"-15px" }}>
+						<div style={{ backgroundColor:"#505050", width:"100%", zIndex:"15", marginRight:"-15px", marginLeft:"-15px" }}>
 							<Row style={{ width:"100%", margin:"0", marginRight:"-15px" }}>
 								<Col style={{ textAlign:"center" }}>
 									<b>Left Click: Select/Deselect Evidence.<br/>Right Click: Ignore/Unignore Evidence.</b>

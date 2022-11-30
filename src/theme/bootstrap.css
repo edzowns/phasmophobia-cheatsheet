@@ -69,7 +69,7 @@ body {
   line-height: 1.5;
   color: #EBEBEB;
   text-align: left;
-  background-color: #191919;
+  background-color: #505050;
 }
 
 [tabindex="-1"]:focus {
@@ -6986,7 +6986,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #121212 !important;
+  background-color: #3e3e3e !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
