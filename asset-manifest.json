@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/phasmophobia-cheatsheet/static/css/main.6e34925b.css",
-    "main.js": "/phasmophobia-cheatsheet/static/js/main.e9bc73ef.js",
+    "main.js": "/phasmophobia-cheatsheet/static/js/main.5ad86d2e.js",
     "static/media/ghost.svg": "/phasmophobia-cheatsheet/static/media/ghost.318fff835a6981c8f9dd3aec39c29f8d.svg",
     "index.html": "/phasmophobia-cheatsheet/index.html",
     "main.6e34925b.css.map": "/phasmophobia-cheatsheet/static/css/main.6e34925b.css.map",
-    "main.e9bc73ef.js.map": "/phasmophobia-cheatsheet/static/js/main.e9bc73ef.js.map"
+    "main.5ad86d2e.js.map": "/phasmophobia-cheatsheet/static/js/main.5ad86d2e.js.map"
   },
   "entrypoints": [
     "static/css/main.6e34925b.css",
-    "static/js/main.e9bc73ef.js"
+    "static/js/main.5ad86d2e.js"
   ]
 }
