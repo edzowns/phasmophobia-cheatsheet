@@ -114,14 +114,8 @@ export default class MainGridPage extends Component {
 			return <Col 
 				className={"ghost-header" + additionalStyle}
 				key={"header-" + ghostName}
-				onClick={(e) => {
-					console.log(e.type + " CLICK " + ghostName)
-					e.preventDefault();
-				}}
-				onContextMenu={(e) => {
-					console.log(e.type + " CLICK " + ghostName)
-					e.preventDefault();
-				}}
+				onClick={(e) => {this.props.onEvidenceClick(e, Object.keys(this.props.ghostHasEvidence[ghostName]).slice(-1))}}
+				onContextMenu={(e) => {this.props.onEvidenceClick(e, Object.keys(this.props.ghostHasEvidence[ghostName]).slice(-1))}}
 			>
 				<div className="rotated45">{ghostName}</div>
 			</Col>
